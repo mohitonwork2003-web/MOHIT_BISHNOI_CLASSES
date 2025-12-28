@@ -1,281 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohit Bishnoi | Maths & Science Teacher</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #1e3a8a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #2563eb;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      padding: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2 { color: #1e3a8a; }
-    .btn {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohit Bishnoi | Maths & Science Teacher</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#f0f4ff;
+  color:#1f2937;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+  position:relative;
+}
+header::after{
+  content:"∑  π  √  ⚛  🔬";
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+  font-size:1.2rem;
+  opacity:0.5;
+}
+header h1{margin:0;font-size:2.6rem}
+header p{margin:5px 0}
+
+/* NAV */
+nav{
+  background:#2563eb;
+  text-align:center;
+  padding:12px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+nav a{
+  color:#fff;
+  margin:6px 12px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.95rem;
+}
+nav a:hover{text-decoration:underline}
+
+/* LAYOUT */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 15px;
+}
+.section{
+  background:#fff;
+  padding:25px;
+  margin-bottom:30px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  position:relative;
+}
+.section::before{
+  content:"📘";
+  position:absolute;
+  top:-15px;
+  right:15px;
+  font-size:2rem;
+}
+h2{
+  color:#1e3a8a;
+  border-bottom:3px solid #e5e7eb;
+  padding-bottom:6px;
+}
+h3{color:#2563eb;margin-top:20px}
+
+/* LIST */
+ul{padding-left:20px}
+li{margin:10px 0}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-left:10px;
+  background:#2563eb;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:.85rem;
+}
+.btn:hover{background:#1e40af}
+
+/* SUBJECT ICONS */
+.math::before{content:"📐 ";font-weight:bold}
+.science::before{content:"🔬 ";font-weight:bold}
+
+/* FOOTER */
+footer{
+  background:#1e3a8a;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  font-size:.9rem;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+.whatsapp:hover{background:#1ebe5d}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Mohit Bishnoi</h1>
-    <p>Maths & Science Teacher (B.Sc. B.Ed)</p>
-    <p>गणित एवं विज्ञान शिक्षक</p>
-  </header>
+<header>
+<h1>Mohit Bishnoi</h1>
+<p>Maths & Science Teacher (B.Sc. B.Ed)</p>
+<p>गणित एवं विज्ञान शिक्षक</p>
+</header>
 
-  <nav>
-    <a href="#home">Home / होम</a>
-    <a href="#classes">Classes 6–10 / कक्षाएँ 6–10</a>
-    <a href="#notes">Notes / नोट्स</a>
-    <a href="#papers">Question Papers / प्रश्न पत्र</a>
-    <a href="#tests">Tests / अभ्यास टेस्ट</a>
-    <a href="#live">Live & Recorded / लाइव कक्षाएँ</a>
-    <a href="#contact">Contact / संपर्क</a>
-  </nav>
+<nav>
+<a href="#home">Home / होम</a>
+<a href="#classes">Classes 6–10</a>
+<a href="#notes">Notes / नोट्स</a>
+<a href="#papers">Question Papers</a>
+<a href="#tests">Tests</a>
+<a href="#live">Live Classes</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <div class="container">
+<div class="container">
 
-    <section id="home" class="section">
-      <h2>Welcome | स्वागत है</h2>
-      <p>
-        Welcome to the official learning portal of <strong>Mohit Bishnoi</strong>.
-        Here students can download Maths and Science notes, previous years'
-        question papers, and practice tests for exam preparation.
-      </p>
-      <p>
-        <strong>मोहित बिश्नोई</strong> के आधिकारिक अध्ययन पोर्टल में आपका स्वागत है।
-        यहाँ छात्र गणित एवं विज्ञान के नोट्स, पुराने प्रश्न पत्र और अभ्यास टेस्ट डाउनलोड कर सकते हैं।
-      </p>
-    </section>
+<section id="home" class="section">
+<h2>Welcome | स्वागत है</h2>
+<p>
+Welcome to the official learning portal of <b>Mohit Bishnoi</b>.
+यहाँ छात्रों को गणित एवं विज्ञान के नोट्स, प्रश्न पत्र और अभ्यास टेस्ट मिलेंगे।
+</p>
+</section>
 
-    <section id="classes" class="section">
-      <h2>Classes 6–10 | कक्षाएँ 6–10</h2>
-      <ul>
-        <li><strong>Class 6</strong> – Maths & Science (Notes, Videos, Tests)</li>
-        <li><strong>Class 7</strong> – Maths & Science (Notes, Videos, Tests)</li>
-        <li><strong>Class 8</strong> – Maths & Science (Notes, Videos, Tests)</li>
-        <li><strong>Class 9</strong> – Maths & Science (Board Focus)</li>
-        <li><strong>Class 10</strong> – Maths & Science (Board Focus)</li>
-      </ul>
-    </section>
+<section id="classes" class="section">
+<h2>Classes 6–10 | कक्षाएँ 6–10</h2>
+<ul>
+<li class="math">Class 6 – Maths & Science</li>
+<li class="math">Class 7 – Maths & Science</li>
+<li class="math">Class 8 – Maths & Science</li>
+<li class="science">Class 9 – Board Preparation</li>
+<li class="science">Class 10 – Board Preparation</li>
+</ul>
+</section>
 
-    <section id="notes" class="section">
-      <h2>Study Material – Class wise Chapters | अध्याय अनुसार अध्ययन सामग्री</h2>
+<section id="notes" class="section">
+<h2>Study Material | अध्ययन सामग्री</h2>
 
-      <h3>Class 6 | कक्षा 6</h3>
-      <ul>
-        <li>Maths – Knowing Our Numbers</li>
-        <li>Maths – Whole Numbers</li>
-        <li>Science – Food: Where Does It Come From?</li>
-        <li>Science – Components of Food</li>
-      </ul>
+<h3>Class 10 Science</h3>
+<ul>
+<li class="science">1. Chemical Reactions
+<a class="btn" href="https://drive.google.com/file/d/1j7qrDGQvkT5bb8QbJo1c6zad_y0fQaa5/view?usp=drivesdk">Download</a>
+</li>
 
-      <h3>Class 7 | कक्षा 7</h3>
-      <ul>
-        <li>Maths – Integers</li>
-        <li>Maths – Fractions & Decimals</li>
-        <li>Science – Nutrition in Plants</li>
-        <li>Science – Heat</li>
-      </ul>
+<li class="science">2. Acids, Bases & Salts
+<a class="btn" href="https://drive.google.com/file/d/1R3vJMRSiDTC177vP-xvoawZPk22doMrH/view?usp=drivesdk">Download</a>
+</li>
 
-      <h3>Class 8 | कक्षा 8</h3>
-      <ul>
-        <li>Maths – Rational Numbers</li>
-        <li>Maths – Linear Equations</li>
-        <li>Science – Crop Production</li>
-        <li>Science – Force and Pressure</li>
-      </ul>
+<li class="science">3. Metals & Non-metals
+<a class="btn" href="https://drive.google.com/file/d/15CuEUfOIvoaIIZorj_lXHiBYrxtlmHVG/view?usp=drivesdk">Download</a>
+</li>
 
-      <h3>Class 9 | कक्षा 9</h3>
-      <ul>
-        <li>Maths – Number Systems</li>
-        <li>Maths – Polynomials</li>
-        <li>Science – Motion</li>
-        <li>Science – Force and Laws of Motion</li>
-      </ul>
+<li class="science">4. Carbon & Its Compounds
+<a class="btn" href="https://drive.google.com/file/d/105nM1xSHVyYihvB7lyWHczrZ9XYaNngc/view?usp=drivesdk">Download</a>
+</li>
+</ul>
+</section>
 
-      <h3>Class 10 | कक्षा 10</h3>
-      <ul>
-        <li>Maths – Real Numbers</li>
-        <li>Maths – Quadratic Equations</li>
-        <li>Science – 1.Chemical Reactions</li>
-        <a class="btn" href="https://drive.google.com/file/d/1j7qrDGQvkT5bb8QbJo1c6zad_y0fQaa5/view?usp=drivesdk">Download</a></li>
-        <li>Science – 2.Acid,Base and Salts</li>
-        <a class="btn" href="https://drive.google.com/file/d/1R3vJMRSiDTC177vP-xvoawZPk22doMrH/view?usp=drivesdk">Download</a></li> 
-        <li>Science – 3.Metals and Non-metals</li>
-        <a class="btn" href="https://drive.google.com/file/d/15CuEUfOIvoaIIZorj_lXHiBYrxtlmHVG/view?usp=drivesdk">Download</a></li> 
-        <li>Science – 4.Carbon and its compounds</li>
-        <a class="btn" href="https://drive.google.com/file/d/105nM1xSHVyYihvB7lyWHczrZ9XYaNngc/view?usp=drivesdk">Download</a></li>
-        <li>Science – 6.Life Processes</ul>
+<section id="papers" class="section">
+<h2>Previous Year Papers | पुराने प्रश्न पत्र</h2>
+<ul>
+<li class="math">Class 10 Maths – 2025
+<a class="btn" href="https://drive.google.com/file/d/15Tb4VIfFdE5gSagLqFgHuUpKzwelcdz0/view?usp=drivesdk">Download</a>
+</li>
+<li class="science">Class 10 Science – 2025
+<a class="btn" href="https://drive.google.com/file/d/1l5G9ia1b0S5_X87vST8oK8TJnRH2uzsj/view?usp=drivesdk">Download</a>
+</li>
+</ul>
+</section>
 
-      <p class="upload-note">
-        
-    <section id="papers" class="section">
-      <h2>Previous Year Question Papers | पुराने प्रश्न पत्र</h2>
-      <ul>
-        <li>Class 10 Maths – Board Exam 2021 | कक्षा 10 गणित बोर्ड परीक्षा 2021
-          
-          <a class="btn" href="https://drive.google.com/file/d/1ThY82vyUzUPX77YvubNGX2egccPrm5wr/view?usp=drivesdk">    
-            Download </a>      
-        <li>Class 10 Maths – Board Exam 2022 | कक्षा 10 गणित बोर्ड परीक्षा 2022 
-         
-          <a class="btn" href="https://drive.google.com/file/d/1etoOuAsi8znFyxsrj7JiNSUWW53c-CB8/view?usp=drivesdk">     
-            Download  </a>        
-        <li>Class 10 Maths – Board Exam 2023 | कक्षा 10 गणित बोर्ड परीक्षा 2023
-      
-          <a class="btn" href="https://drive.google.com/file/d/1I4qTZfJK4KtPTKrU_xHE2P6sBoQkBGei/view?usp=drivesdk">   
-            Download  </a>
-        <li>Class 10 Maths – Board Exam 2024 | कक्षा 10 गणित बोर्ड परीक्षा 2024
-          
-          <a class="btn" href="https://drive.google.com/file/d/1aGKDSHQO0DyRfFlECgZ5VmCeVWniOydc/view?usp=drivesdk">  
-            Download  </a>
-        <li>Class 10 Maths – Board Exam 2025 | कक्षा 10 गणित बोर्ड परीक्षा 2025
-           
-          <a class="btn" href="https://drive.google.com/file/d/15Tb4VIfFdE5gSagLqFgHuUpKzwelcdz0/view?usp=drivesdk">  
-            Download  </a>
-        </li>Class 10 Science – Board Exam 2021 | कक्षा 10 विज्ञान बोर्ड परीक्षा 2021
-     
-        <a class="btn" href="https://drive.google.com/file/d/1gHmEARwZoyA1g7S66bzs6zxSBkJMdFaP/view?usp=drivesdk">     
-          Downnload  </a>
-        <li>Class 10 Science – Board Exam 2022 | कक्षा 10 विज्ञान बोर्ड परीक्षा 2022
-     
-        <a class="btn" href="https://drive.google.com/file/d/1CTgx-Bxfrmgvkz2boh6UEwW2wx2-fFk4/view?usp=drivesdk">      
-          Downnload  </a>
-        </li>Class 10 Science – Board Exam 2023 | कक्षा 10 विज्ञान बोर्ड परीक्षा 2023
-     
-        <a class="btn" href="https://drive.google.com/file/d/10xnh7R2uYEmPtdcaIDcO7iDR-eZF_GfR/view?usp=drivesdk">    
-          Downnload  </a>
-        </li>Class 10 Science – Board Exam 2024 | कक्षा 10 विज्ञान बोर्ड परीक्षा 2024
-     
-        <a class="btn" href="https://drive.google.com/file/d/1c-Wrx4zbV-6vmb3f_53f-rFJMuL4TLAj/view?usp=drivesdk">     
-          Downnload  </a>
-       
-        <li>Class 10 Science – Board Exam 2025 | कक्षा 10 विज्ञान बोर्ड परीक्षा 2025
-     
-        <a class="btn" href="https://drive.google.com/file/d/1l5G9ia1b0S5_X87vST8oK8TJnRH2uzsj/view?usp=drivesdk">      Downnload  </a>
-        <li>Class 9 Science – Annual Exam | कक्षा 9 विज्ञान वार्षिक परीक्षा
-          <a class="btn" href="#"> Download</a>
-        </li>
-      </ul>
-    </section>
+<section id="tests" class="section">
+<h2>Practice Tests | अभ्यास परीक्षा</h2>
+<p>Online tests जल्द ही उपलब्ध होंगे।</p>
+</section>
 
-    <section id="tests" class="section">
-      <h2>Practice Tests | अभ्यास परीक्षा</h2>
-      <ul>
-        <li>
-          Class 10 Maths – Quadratic Equations | द्विघात समीकरण
-          <a class="btn" href="#">Start Test / टेस्ट शुरू करें</a>
-        </li>
-      </ul>
-    </section>
+<section id="live" class="section">
+<h2>Live & Recorded Classes | लाइव कक्षाएँ</h2>
+<ul>
+<li>🔴 Live Classes – Google Meet / Zoom</li>
+<li>▶️ Recorded Videos – Chapter wise</li>
+</ul>
+</section>
 
-    <section id="live" class="section">
-      <h2>Live & Recorded Classes | लाइव एवं रिकॉर्डेड कक्षाएँ</h2>
-      <p>
-        Students can attend live online classes and watch recorded lectures anytime.
-      </p>
-      <p>
-        छात्र लाइव ऑनलाइन कक्षाओं में भाग ले सकते हैं तथा रिकॉर्डेड वीडियो कभी भी देख सकते हैं।
-      </p>
-      <ul>
-        <li>
-          🔴 Live Classes (Google Meet / Zoom)
-          <span class="upload-note">– Weekly Schedule</span>
-        </li>
-        <li>
-          ▶️ Recorded Video Lectures
-          <span class="upload-note">– Chapter-wise Videos</span>
-        </li>
-      </ul>
-      <p class="upload-note">
-      </p>
-    </section>
+<section id="contact" class="section">
+<h2>Contact | संपर्क करें</h2>
+<p>
+<b>Email:</b> mohitonwork2003@gmail.com<br>
+<b>WhatsApp:</b> +91-9166428933
+</p>
+</section>
 
-    <section id="contact" class="section">
-      <h2>Contact | संपर्क करें</h2>
-      <p>
-        For study material and guidance, contact directly.<br>
-        अध्ययन सामग्री एवं मार्गदर्शन के लिए संपर्क करें।
-      </p>
-      <p>
-        <strong>Email:</strong> mohitonwork2003@gmail.com<br />
-        <strong>WhatsApp:</strong> +91-9166428933
-      </p>
-    </section>
+</div>
 
-  </div>
+<footer>
+© 2025 Mohit Bishnoi | Maths & Science Teacher
+</footer>
 
-  <footer>
-    <p>© 2025 Mohit Bishnoi | Maths & Science Teacher</p>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/+919166428933" target="_blank">
-    💬 Join Free Class
-  </a>
+<a class="whatsapp" href="https://wa.me/919166428933" target="_blank">
+💬 Join Free Class
+</a>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
