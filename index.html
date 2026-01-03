@@ -36,18 +36,34 @@ header{
 }
 /* NAV */
 nav{
-  background:#2563eb;
-  text-align:center;
-  padding:12px;
-  position:sticky;
-  top:0;
-  z-index:1000;
+  background: linear-gradient(
+    90deg,
+    rgba(15,30,60,0.9),
+    rgba(30,120,150,0.9),
+    rgba(180,120,40,0.9)
+  );
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 nav a{
-  color:#fff;
-  margin:6px 10px;
+  color:#ffffff;
+  margin:6px 14px;
   text-decoration:none;
   font-weight:600;
+  font-size:0.95rem;
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+nav a:hover{
+  background:rgba(255,255,255,0.15);
+}
+nav{
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 .toggle{
   background:#fff;
@@ -331,6 +347,7 @@ function toggleDark(){
 
 </body>
 </html>
+
 
 
 
