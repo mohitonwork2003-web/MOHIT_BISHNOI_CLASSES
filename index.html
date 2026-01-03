@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mohit Bishnoi | Maths & Science Teacher</title>
-<meta name="description" content="Free Maths and Science notes, online tests and results for class 6–10 by Mohit Bishnoi">
-<meta name="keywords" content="Maths teacher, Science teacher, online tests, class 10 notes">
 
 <style>
 *{box-sizing:border-box}
@@ -17,14 +14,11 @@ body{
   color:#1f2937;
   transition:.3s;
 }
-
-/* DARK MODE */
 body.dark{
   background:#0f172a;
   color:#e5e7eb;
 }
 body.dark .section{background:#1e293b}
-body.dark h2{color:#93c5fd}
 
 /* HEADER */
 header{
@@ -37,14 +31,15 @@ header{
 /* NAV */
 nav{
   background:#2563eb;
-  padding:12px;
   text-align:center;
+  padding:12px;
   position:sticky;
   top:0;
+  z-index:1000;
 }
 nav a{
   color:#fff;
-  margin:6px 12px;
+  margin:6px 10px;
   text-decoration:none;
   font-weight:600;
 }
@@ -68,43 +63,32 @@ nav a{
   padding:25px;
   margin-bottom:30px;
   border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
 /* SUBJECT THEMES */
 .math-theme{
   border-left:7px solid #2563eb;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(37,99,235,.05),
-      rgba(37,99,235,.05) 1px,
-      transparent 1px,
-      transparent 20px
-    ),#fff;
+  background:#eff6ff;
 }
 .science-theme{
   border-left:7px solid #16a34a;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(22,163,74,.05),
-      rgba(22,163,74,.05) 1px,
-      transparent 1px,
-      transparent 25px
-    ),#fff;
+  background:#ecfdf5;
 }
 
 h2{
   color:#1e3a8a;
   border-bottom:3px solid #e5e7eb;
 }
+h3{margin-top:20px}
 ul{padding-left:20px}
-li{margin:10px 0}
+li{margin:8px 0}
 
 /* ICONS */
 .math::before{content:"📐 "}
 .science::before{content:"🔬 "}
+.live::before{content:"🔴 "}
+.video::before{content:"▶️ "}
 
 /* BUTTON */
 .btn{
@@ -160,7 +144,7 @@ footer{
 
 <body>
 
-<!-- FLOATING FORMULAS -->
+<!-- FLOATING BACKGROUND -->
 <div class="floating">
   <div class="formula" style="left:10%">∑</div>
   <div class="formula" style="left:25%">π</div>
@@ -173,88 +157,110 @@ footer{
 <header>
 <h1>Mohit Bishnoi</h1>
 <p>Maths & Science Teacher (B.Sc. B.Ed)</p>
-<p>गणित एवं विज्ञान शिक्षक | कक्षा 6–10</p>
+<p>कक्षा 6 से 10 | गणित एवं विज्ञान</p>
 </header>
 
 <nav>
 <a href="#notes">Notes | नोट्स</a>
 <a href="#tests">Tests | टेस्ट</a>
-<a href="#results">Results | परिणाम</a>
-<a href="#leaderboard">Top Students</a>
-<a href="#admin">Teacher Panel</a>
+<a href="#papers">Board Papers</a>
+<a href="#classes">Live / Recorded</a>
 <a href="#contact">Contact</a>
 <span class="toggle" onclick="toggleDark()">🌙 Dark</span>
 </nav>
 
 <div class="container">
 
-<section id="notes" class="section math-theme">
-<h2>Maths Notes | गणित नोट्स</h2>
+<!-- NOTES -->
+<section id="notes" class="section">
+<h2>Class-wise Notes | कक्षा अनुसार नोट्स</h2>
+
+<h3>Class 6 – 8</h3>
 <ul>
-<li class="math">Real Numbers  
-<a class="btn" href="YOUR_DRIVE_LINK">Download</a>
-</li>
-<li class="math">Polynomial  
-<a class="btn" href="YOUR_DRIVE_LINK">Download</a>
-</li>
+<li class="math">Maths Notes (PDF)</li>
+<li class="science">Science Notes (PDF)</li>
+</ul>
+
+<h3>Class 9</h3>
+<ul>
+<li class="math">Maths – Board Focus</li>
+<li class="science">Science – Board Focus</li>
+</ul>
+
+<h3>Class 10</h3>
+<ul>
+<li class="math">Maths – NCERT + Practice</li>
+<li class="science">Science – NCERT + Practice</li>
 </ul>
 </section>
 
-<section class="section science-theme">
-<h2>Science Notes | विज्ञान नोट्स</h2>
-<ul>
-<li class="science">Chemical Reactions  
-<a class="btn" href="YOUR_DRIVE_LINK">Download</a>
-</li>
-<li class="science">Acids, Bases & Salts  
-<a class="btn" href="YOUR_DRIVE_LINK">Download</a>
-</li>
-</ul>
-</section>
-
+<!-- TESTS -->
 <section id="tests" class="section">
 <h2>Online Tests | ऑनलाइन टेस्ट</h2>
-<p>नीचे दिए गए टेस्ट Google Form पर आधारित हैं।</p>
+
+<h3>Class 6 – 8</h3>
 <ul>
-<li class="math">Maths Test  
-<a class="btn" href="YOUR_FORM_LINK">Start Test</a>
+<li class="math">Maths Practice Test</li>
+<li class="science">Science Practice Test</li>
+</ul>
+
+<h3>Class 9</h3>
+<ul>
+<li class="math">Maths Chapter Tests</li>
+<li class="science">Science Chapter Tests</li>
+</ul>
+
+<h3>Class 10</h3>
+<ul>
+<li class="math">Board Pattern Maths Test</li>
+<li class="science">Board Pattern Science Test</li>
+</ul>
+</section>
+
+<!-- OLD BOARD QUESTION PAPERS -->
+<section id="papers" class="section">
+<h2>Board Question Papers | बोर्ड प्रश्न पत्र (Class 10)</h2>
+
+<h3>Maths</h3>
+<ul>
+<li class="math">2021 <a class="btn" href="https://drive.google.com/file/d/1ThY82vyUzUPX77YvubNGX2egccPrm5wr/view?usp=drivesdk">Download</a></li>
+<li class="math">2022 <a class="btn" href="https://drive.google.com/file/d/1etoOuAsi8znFyxsrj7JiNSUWW53c-CB8/view?usp=drivesdk">Download</a></li>
+<li class="math">2023 <a class="btn" href="https://drive.google.com/file/d/1I4qTZfJK4KtPTKrU_xHE2P6sBoQkBGei/view?usp=drivesdk">Download</a></li>
+<li class="math">2024 <a class="btn" href="https://drive.google.com/file/d/1aGKDSHQO0DyRfFlECgZ5VmCeVWniOydc/view?usp=drivesdk">Download</a></li>
+<li class="math">2025 <a class="btn" href="https://drive.google.com/file/d/15Tb4VIfFdE5gSagLqFgHuUpKzwelcdz0/view?usp=drivesdk">Download</a></li>
+</ul>
+
+<h3>Science</h3>
+<ul>
+<li class="science">2021 <a class="btn" href="https://drive.google.com/file/d/1gHmEARwZoyA1g7S66bzs6zxSBkJMdFaP/view?usp=drivesdk">Download</a></li>
+<li class="science">2022 <a class="btn" href="https://drive.google.com/file/d/1CTgx-Bxfrmgvkz2boh6UEwW2wx2-fFk4/view?usp=drivesdk">Download</a></li>
+<li class="science">2023 <a class="btn" href="https://drive.google.com/file/d/10xnh7R2uYEmPtdcaIDcO7iDR-eZF_GfR/view?usp=drivesdk">Download</a></li>
+<li class="science">2024 <a class="btn" href="https://drive.google.com/file/d/1c-Wrx4zbV-6vmb3f_53f-rFJMuL4TLAj/view?usp=drivesdk">Download</a></li>
+<li class="science">2025 <a class="btn" href="https://drive.google.com/file/d/1l5G9ia1b0S5_X87vST8oK8TJnRH2uzsj/view?usp=drivesdk">Download</a></li>
+</ul>
+</section>
+
+<!-- LIVE & RECORDED -->
+<section id="classes" class="section">
+<h2>Live & Recorded Classes | लाइव एवं रिकॉर्डेड कक्षाएँ</h2>
+
+<h3>Live Classes</h3>
+<ul>
+<li class="live">Live Class via Google Meet / Zoom</li>
+<li class="live">Doubt Solving Session</li>
+</ul>
+
+<h3>Recorded Classes</h3>
+<ul>
+<li class="video">Chapter-wise Recorded Videos</li>
+<li class="video">
+YouTube Channel  
+<a class="btn" href="https://youtube.com/@thegoodteacher-o8x?si=R_ZNJOLGKH9S9ed9">Visit</a>
 </li>
-<li class="science">Science Test  
-<a class="btn" href="YOUR_FORM_LINK">Start Test</a>
-</li>
 </ul>
 </section>
 
-<section id="results" class="section">
-<h2>Results | परीक्षा परिणाम</h2>
-<p>
-✔ टेस्ट सबमिट करने के बाद तुरंत स्कोर दिखेगा<br>
-✔ छात्र स्क्रीनशॉट या PDF सेव कर सकते हैं<br>
-✔ शिक्षक द्वारा परिणाम विश्लेषण
-</p>
-</section>
-
-<section id="leaderboard" class="section">
-<h2>Top Performers | टॉप छात्र</h2>
-<p>(Teacher updated)</p>
-<ul>
-<li>🥇 Rahul – 95%</li>
-<li>🥈 Priya – 92%</li>
-<li>🥉 Aman – 90%</li>
-</ul>
-</section>
-
-<section id="admin" class="section">
-<h2>Teacher Panel | शिक्षक पैनल</h2>
-<ul>
-<li>✔ Google Form responses download</li>
-<li>✔ Result PDF generate</li>
-<li>✔ Leaderboard update</li>
-<li>✔ Student performance analysis</li>
-</ul>
-<p><b>Note:</b> Only for teacher use.</p>
-</section>
-
+<!-- CONTACT -->
 <section id="contact" class="section">
 <h2>Contact | संपर्क</h2>
 <p>
@@ -269,7 +275,7 @@ WhatsApp: +91 9166428933
 © 2025 Mohit Bishnoi | Maths & Science Teacher
 </footer>
 
-<a class="whatsapp" href="https://wa.me/+919166428933">💬 Join Free Class</a>
+<a class="whatsapp" href="https://wa.me/919166428933">💬 Join Free Class</a>
 
 <script>
 function toggleDark(){
@@ -279,13 +285,3 @@ function toggleDark(){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
