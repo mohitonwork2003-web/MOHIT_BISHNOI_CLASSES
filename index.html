@@ -7,11 +7,6 @@
 
 <style>
 *{box-sizing:border-box}
-<div class="popup-notice" id="popup">
-  🔴 Notes for class 11-12 uploaded soon
-  <span onclick="closeNotice()">✖</span>
-</div>
-
 body{
   margin:0;
   font-family:Segoe UI,Arial,sans-serif;
@@ -78,14 +73,6 @@ nav{
   cursor:pointer;
   font-size:.8rem;
 }
-<div class="notice-bar">
-  <span class="notice-title">🔔 Notice:</span>
-  <marquee behavior="scroll" direction="left">
-    📢 Class 10 Maths chapter 3 Test on Friday |  
-    📄 New Notes and test for Class 11-12 uploaded soon | 
-  </marquee>
-</div>
-
 /* LAYOUT */
 .container{
   max-width:1100px;
@@ -112,31 +99,6 @@ nav{
   padding:8px 12px;
   font-weight:600;
 }
-
-.notice-title{
-  margin-right:12px;
-  white-space:nowrap;
-}
-.popup-notice{
-  position:fixed;
-  bottom:80px;
-  right:20px;
-  background:#1e3a8a;
-  color:#fff;
-  padding:12px 16px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,.3);
-  font-weight:600;
-  z-index:999;
-}
-
-.popup-notice span{
-  margin-left:10px;
-  cursor:pointer;
-}
-  
-  
-
 /* SUBJECT THEMES */
 .math-theme{
   border-left:7px solid #2563eb;
@@ -414,9 +376,16 @@ function toggleDark(){
   document.body.classList.toggle("dark");
 }
 </script>
+<script>
+function closeNotice(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+  
 
 </body>
 </html>
+
 
 
 
