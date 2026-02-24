@@ -1,91 +1,492 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHRBJEE711"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PHRBJEE711');
+</script>
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit Bishnoi | Learning Portal</title>
+<title>Mohit Bishnoi | Maths & Science Teacher</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
   margin:0;
-  font-family:Arial;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:white;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f0f4ff;
+  color:#1f2937;
+  transition:.3s;
+}
+body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
+body.dark .section{background:#1e293b}
+
+/* HEADER */
+header{
+  background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+    url("bg-study.png");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
 }
 
-.screen{
-  height:100vh;
+/* NAV */
+nav{
+  background:linear-gradient(
+    90deg,
+    rgba(15,30,60,.95),
+    rgba(30,120,150,.95),
+    rgba(180,120,40,.95)
+  );
+  text-align:center;
+  padding:12px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+nav a{
+  color:#fff;
+  margin:6px 12px;
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:6px;
+}
+nav a:hover{background:rgba(255,255,255,.15)}
+.toggle{
+  background:#fff;
+  color:#000;
+  padding:5px 12px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:.8rem;
+}
+
+/* NOTICE BAR */
+.notice-bar{
+  background:linear-gradient(
+    90deg,
+    rgba(15,30,60,.95),
+    rgba(30,120,150,.95),
+    rgba(180,120,40,.95)
+  );
+  color:#fff;
   display:flex;
-  flex-direction:column;
+  align-items:center;
+  padding:8px 12px;
+  font-weight:600;
+}
+
+/* LAYOUT */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 15px;
+}
+.section{
+  background:#fff;
+  padding:25px;
+  margin-bottom:30px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* SUBJECT ICONS */
+.math::before{content:"📐 "}
+.science::before{content:"🔬 "}
+.live::before{content:"🔴 "}
+.video::before{content:"▶️ "}
+
+/* BUTTON */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:6px 8px 6px 0;   /* 👈 SPACE BETWEEN BUTTONS */
+  background: linear-gradient(
+    90deg,
+    rgba(30,120,150,1),
+    rgba(180,120,40,1)
+  );
+  color:#ffffff;
+  padding:8px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+/* 👇 ADD THIS JUST BELOW */
+.btn-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}  
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+/* POPUP */
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:flex;
   justify-content:center;
   align-items:center;
+  z-index:9999;
+}
+.popup-content{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  width:300px;
   text-align:center;
-  padding:20px;
+  position:relative;
+  animation:slideDown .4s ease;
+}
+.close-btn{
+  position:absolute;
+  right:10px;
+  top:5px;
+  cursor:pointer;
+  font-size:22px;
+  font-weight:bold;
+}
+@keyframes slideDown{
+  from{transform:translateY(-50px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+  
+/* FLOATING FORMULAS */ 
+.floating{
+  position:fixed; 
+  inset:0; 
+  pointer-events:none; 
+  z-index:-1;
+} 
+.formula{ 
+  position:absolute; 
+  font-size:3rem; 
+  opacity:.05; 
+  animation:float 30s linear infinite; 
+} 
+@keyframes float{ 
+  from{transform:translateY(110vh)} 
+  to{transform:translateY(-10vh)}
+}  
+
+/* FOOTER */
+footer{
+  background:linear-gradient(
+    90deg,
+    rgba(15,30,60,.95),
+    rgba(30,120,150,.95),
+    rgba(180,120,40,.95)
+  );
+  color:#fff;
+  text-align:center;
+  padding:25px 15px;
+  font-size:.9rem;
 }
 
-.hidden{display:none;}
-
-.card{
-  background:rgba(255,255,255,0.1);
-  padding:20px;
-  margin:15px;
-  border-radius:15px;
-  width:90%;
-  max-width:400px;
-}
-
-.btn{
-  display:block;
-  margin-top:10px;
-  padding:10px;
-  border-radius:25px;
-  background:#00c6ff;
-  color:white;
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:50px;
   text-decoration:none;
 }
 </style>
 </head>
-
+  
 <body>
+<!-- Notification Popup -->
+<div id="notificationPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h3>📢 Latest Announcement</h3>
+    <p>New Class 10 Life Process Test is now available!</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBWTvyipnGFw9g5gt3vYG4Px7BNfHcg8SEhfdv4gelw3Qoqg/viewform?usp=publish-editor" class="popup-btn">Check Now</a>
+  </div>
+</div>
+  
+<!-- FLOATING BACKGROUND -->
+<div class="floating"> 
+  <div class="formula" style="left:10%">∑</div> 
+  <div class="formula" style="left:25%">π</div> 
+  <div class="formula" style="left:40%">√</div> 
+  <div class="formula" style="left:55%">x²</div> 
+  <div class="formula" style="left:70%">E=mc²</div> 
+  <div class="formula" style="left:85%">⚛</div> 
+</div>  
 
-<!-- START PAGE -->
-<div id="startScreen" class="screen">
-  <h1>Mohit Bishnoi</h1>
-  <p>Premium Maths & Science Learning</p>
-  <button class="btn" onclick="startLearning()">Start Learning</button>
+<header>
+<h1>Mohit Bishnoi</h1>
+<p>Maths & Science Teacher (B.Sc. B.Ed)</p>
+<p>कक्षा 6 से 12 | गणित एवं विज्ञान</p>
+</header>
+
+<nav>
+<a href="#notes">Notes | नोट्स</a>
+<a href="#tests">Tests | टेस्ट</a>
+<a href="#papers">Board Papers</a>
+<a href="#classes">Live / Recorded</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleDark()">🌙 Dark</span>
+</nav>
+
+<!-- 🔔 LIVE NOTICE PANEL -->
+<div class="notice-bar">
+  <span style="margin-right:12px;">🔔 Latest Update:</span>
+  <marquee>
+    📢New Notes for class 11-12 Uploaded soon
+    📝 4. Quadratic equation (Notes with examples and exercise) available for class 10  
+    📝 Online Test Available now for Class 10  – Quadratic equation |
+    📝 Online Test Available now for Class 10  – Life Process |
+  </marquee>
 </div>
 
-<!-- MAIN PAGE -->
-<div id="mainScreen" class="screen hidden">
+<div class="container">
 
-  <div class="card">
-    <h2>📚 Class 10 Maths Notes</h2>
-    <a href="https://drive.google.com/file/d/PASTE_YOUR_PDF_ID/preview" target="_blank" class="btn">
-      Real Numbers Notes
-    </a>
-  </div>
+<!-- NOTES -->
+<section id="notes" class="section">
+<h2>Class-wise Notes | कक्षा अनुसार नोट्स</h2>
+<h3>Class 6 – 8</h3> 
+<ul> 
+<li class="math">Maths Notes (PDF)</li> 
+<li class="science">Science Notes (PDF)</li> 
+</ul>
 
-  <div class="card">
-    <h2>🎥 Physics Video</h2>
-    <a href="https://drive.google.com/file/d/PASTE_YOUR_VIDEO_ID/preview" target="_blank" class="btn">
-      Light Reflection Video
-    </a>
-  </div>
+<h3>Class 9</h3> 
+<ul> 
+<li class="math">Maths – Board Focus</li> 
+<li class="science">Science – Board Focus</li>
+</ul> 
+  
+<h3>Class 10 Maths & Science </h3>
+<ul>
+<li class="math">1.Real Numbers | वास्तविक संख्याएँ 
+<a class="btn" href="https://drive.google.com/open?id=1Oqq0DSw2lrgKB0IiW5er-jC9YRoGbc8-&usp=drive_fs">Download</a>
+</li>
+<li class="math">Polynomial | बहुपद 
+<a class="btn" href="https://drive.google.com/file/d/1gLlLlWhnD3chHih-KhA8TubobeLQzvRB/view?usp=sharing">Download</a>
+</li>
+<li class="math">3. Pair of linear equations in two variables | दो चरों वाले रैखिक समीकरण युग्म 
+<a class="btn" href="https://drive.google.com/open?id=1C1y7lYjDnxgczE5tZKHX104RqiPzurPO&usp=drive_fs">Download</a>
+</liv>
+<li class="math">4. Quadratic Equation | द्विघात समीकरण 
+<a class="btn" href="https://drive.google.com/file/d/16yMg-PQ4mUNBmZF0kxVlvybGMcDOj-9E/view?usp=sharing">Download</a>
+</liv>   
+<li class="math">13. Statistics | सांख्यिकी 
+<a class="btn" href="https://drive.google.com/open?id=1bFeNrhuVBIwK0rXfdcxqCjbHsEdKFeZH&usp=drive_fs">Download</a> 
+</li> 
+<li class="science">1. Chemical Reactions & equactions | रासायनिक अभिक्रियाए और समीकरण 
+<a class="btn" href="https://drive.google.com/file/d/1j7qrDGQvkT5bb8QbJo1c6zad_y0fQaa5/view?usp=drivesdk">Download</a> 
+</li> 
+<li class="science">2. Acids, Bases & Salts | अम्ल,क्षार और लवण 
+<a class="btn" href="https://drive.google.com/file/d/1R3vJMRSiDTC177vP-xvoawZPk22doMrH/view?usp=drivesdk">Download</a> 
+</li> 
+<li class="science">3. Metals & Non-metals | धातु एवं अधातु 
+<a class="btn" href="https://drive.google.com/file/d/15CuEUfOIvoaIIZorj_lXHiBYrxtlmHVG/view?usp=drivesdk">Download</a> 
+</li> 
+<li class="science">4. Carbon & Its Compounds | कार्बन एवं उसके यौगिक 
+<a class="btn" href="https://drive.google.com/file/d/105nM1xSHVyYihvB7lyWHczrZ9XYaNngc/view?usp=drivesdk">Download</a> 
+</li> 
+<li class="science">5. Life process | जैव प्रक्रम 
+<a class="btn" href="https://drive.google.com/file/d/10fMzM5PuwBAjAZPD-VMCd3OLlD1QOs80/view?usp=drivesdk">Download</a> 
+</li>
+</ul>
 
-  <div class="card">
-    <h2>📝 Online Test</h2>
-    <a href="https://forms.gle/PASTE_YOUR_FORM_LINK" target="_blank" class="btn">
-      Chapter 1 Test
-    </a>
-  </div>
+<h3>Class 11</h3> 
+<ul> 
+<li class="math">Maths – available soon</li> 
+<li class="science"> physics,chemistry – available soon</li>
+</ul> 
+<h3>Class 12</h3> 
+<ul> 
+<li class="math">Maths – available soon</li> 
+<li class="science"> physics,chemistry – available soon</li>
+</ul>    
+</section>
+
+<!-- TESTS -->
+<section id="tests" class="section">
+<h2>Online Tests | ऑनलाइन टेस्ट</h2>
+<h3>Class 6 – 8</h3> 
+<ul> 
+<li class="math">Maths Practice Test</li> 
+<li class="science">Science Practice Test</li> 
+</ul> <h3>Class 9</h3> <ul> 
+<li class="math">Maths Chapter Tests</li> 
+<li class="science">Science Chapter Tests</li> 
+</ul>
+
+<h3>Class 10</h3>
+<ul> 
+<li class="math">Maths Practice Tests | गणित अभ्यास परीक्षा 
+</li> 
+<li class="math">1. Real Numbers | वास्तविक संख्याएँ 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc_S-DUpN5KpmNBvopTspT-79aSFjZyWlMjKUwBc3se7-s5oA/viewform?usp=dialog">Start Test / टेस्ट शुरू करें</a> 
+</li>
+  
+<li class="math">2. Polynomial | बहुपद 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdyknyvdX0t89GKyrIm9zbYXHGVODvOkR_Jl2TkUy3kda8f_A/viewform?usp=publish-editor">Start Test / टेस्ट शुरू करें</a> 
+</li> 
+
+<li class="math">3. Pair of linear equations in two variables | दो चरों वाले रैखिक समीकरण युग्म
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScw9nIU2sf--nk1dpYbICTr7Fi9Sse7ppKiE37NjReigCwrfg/viewform?usp=dialog">Start Test / टेस्ट शुरू करें</a> 
+</li>
+
+ <li class="math">4. Quadratic Equation | द्विघात समीकरण 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScrhovQlDifOYINwKOr6AYlU6lj_aS9xikxkMenaHtWsYeaqw/viewform?usp=sharing&ouid=116721979945567578508">Start Test / टेस्ट शुरू करें</a> 
+</li>
+  
+<li class="science">Science Practice Tests | विज्ञान अभ्यास परीक्षा 
+</li> 
+
+<li class="science">1. Chemical Reactions | रासायनिक अभिक्रियाए और समीकरण 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfJdJ5DcvUpKSaVxqF-wHAm2GQgD4tBWbPbifsRo2nYutf-vQ/viewform?usp=sharing&ouid=103570837630842717721">Start test/टेस्ट शुरू करें </a> 
+</li> 
+
+<li class="science">2. Acids, Bases & Salts | अम्ल, क्षार और लवण 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSduINFgiKlSCeSghMZfqeoIi3v7KGj-lONBTaMowR1EJaYk3A/viewform?usp=dialog">Start Test / टेस्ट शुरू करें</a>
+</li> 
+
+<li class="science">3. Metals & Non-metals | धातु एवं अधातु 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSclzNtK9Db5nWM1LzQ-ouUxjzIwBNG8dy9KHQhZIy5sgHhUhQ/viewform?usp=dialog">Start Test / टेस्ट शुरू करें</a> 
+</li> 
+
+<li class="science">4. Carbon & Its Compounds | कार्बन एवं उसके यौगिक 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfgDL50MwTKjMOZ7AqZlFGshQ_hr5OGAkwDjboajJppGewGvg/viewform?usp=publish-editor">Start Test / टेस्ट शुरू करें</a> 
+</li> 
+
+<li class="science">5. Life Process  | जैव प्रक्रम 
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfBWTvyipnGFw9g5gt3vYG4Px7BNfHcg8SEhfdv4gelw3Qoqg/viewform?usp=publish-editor">Start Test / टेस्ट शुरू करें</a> 
+</li>  
+
+</ul>
+</section>
+
+<!-- PAPERS -->
+<section id="papers" class="section">
+<h2>Board Question Papers | Class 10</h2>
+<h3>Maths</h3> 
+<ul> 
+<li class="math">2021 
+<a class="btn" href="https://drive.google.com/file/d/1ThY82vyUzUPX77YvubNGX2egccPrm5wr/view?usp=drivesdk">Download</a>
+</li> 
+<li class="math">2022 
+<a class="btn" href="https://drive.google.com/file/d/1etoOuAsi8znFyxsrj7JiNSUWW53c-CB8/view?usp=drivesdk">Download</a>
+</li> 
+<li class="math">2023 
+<a class="btn" href="https://drive.google.com/file/d/1I4qTZfJK4KtPTKrU_xHE2P6sBoQkBGei/view?usp=drivesdk">Download</a>
+</li> 
+<li class="math">2024 
+<a class="btn" href="https://drive.google.com/file/d/1aGKDSHQO0DyRfFlECgZ5VmCeVWniOydc/view?usp=drivesdk">Download</a>
+</li> 
+<li class="math">2025 
+<a class="btn" href="https://drive.google.com/file/d/15Tb4VIfFdE5gSagLqFgHuUpKzwelcdz0/view?usp=drivesdk">Download</a>
+</li> 
+</ul> 
+<h3>Science</h3> 
+<ul> 
+<li class="science">2021 
+<a class="btn" href="https://drive.google.com/file/d/1gHmEARwZoyA1g7S66bzs6zxSBkJMdFaP/view?usp=drivesdk">Download</a>
+</li> 
+<li class="science">2022 
+<a class="btn" href="https://drive.google.com/file/d/1CTgx-Bxfrmgvkz2boh6UEwW2wx2-fFk4/view?usp=drivesdk">Download</a>
+</li>
+<li class="science">2023 
+<a class="btn" href="https://drive.google.com/file/d/10xnh7R2uYEmPtdcaIDcO7iDR-eZF_GfR/view?usp=drivesdk">Download</a>
+</li> 
+<li class="science">2024
+<a class="btn" href="https://drive.google.com/file/d/1c-Wrx4zbV-6vmb3f_53f-rFJMuL4TLAj/view?usp=drivesdk">Download</a>
+</li> 
+<li class="science">2025 
+<a class="btn" href="https://drive.google.com/file/d/1l5G9ia1b0S5_X87vST8oK8TJnRH2uzsj/view?usp=drivesdk">Download</a>
+</li>
+</ul>
+</section>
+
+<!-- LIVE -->
+<section id="classes" class="section">
+<h2>Live & Recorded Classes</h2>
+<ul>
+<li class="live">Live Class via Google Meet / Zoom</li> 
+<li class="live">Doubt Solving Session</li>
+<li class="video">Chapter-wise Recorded Videos</li> 
+<li class="video"> YouTube Channel <a class="btn" href="https://youtube.com/@thegoodteacher-o8x?si=R_ZNJOLGKH9S9ed9">Visit</a> </li>
+</ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Contact | संपर्क</h2>
+<p>Email: mohitonwork2003@gmail.com<br>
+WhatsApp: +91 9166428933</p>
+</section>
 
 </div>
+
+<footer>
+© 2025 Mohit Bishnoi | Maths & Science Teacher
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919166428933">💬 Join Free Class</a>
 
 <script>
-function startLearning(){
-  document.getElementById("startScreen").classList.add("hidden");
-  document.getElementById("mainScreen").classList.remove("hidden");
+function toggleDark(){
+  document.body.classList.toggle("dark");
 }
+  
+function closePopup(){
+  document.getElementById("notificationPopup").style.display="none";
+}
+
+// Auto close after 5 seconds
+setTimeout(closePopup,10000);  
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
