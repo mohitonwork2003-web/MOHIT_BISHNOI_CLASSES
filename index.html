@@ -1,227 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit Bishnoi | Premium Learning</title>
+<title>Mohit Bishnoi | Learning Portal</title>
 
 <style>
-:root{
-  --bg1:#0f2027;
-  --bg2:#203a43;
-  --bg3:#2c5364;
-  --text:white;
-  --card:rgba(255,255,255,0.1);
-}
-
 body{
   margin:0;
-  font-family:'Segoe UI',sans-serif;
-  color:var(--text);
-  overflow-x:hidden;
-  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
-  background-size:400% 400%;
-  animation:gradientShift 15s ease infinite;
-  transition:0.5s;
-}
-
-body.light{
-  --bg1:#ffecd2;
-  --bg2:#fcb69f;
-  --bg3:#ffdde1;
-  --text:#222;
-  --card:rgba(255,255,255,0.6);
-}
-
-@keyframes gradientShift{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-#bgCanvas{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  padding:40px 20px;
-}
-
-header h1{
-  font-size:2rem;
-}
-
-/* TOGGLE BUTTON */
-.theme-toggle{
-  position:fixed;
-  top:20px;
-  left:20px;
-  cursor:pointer;
-  padding:10px 15px;
-  border-radius:30px;
-  background:linear-gradient(45deg,#ff512f,#dd2476);
+  font-family:Arial;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:white;
-  font-size:14px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.4);
-  transition:0.3s;
 }
 
-.theme-toggle:hover{
-  transform:scale(1.05);
-}
-
-/* CARD */
-.card{
-  margin:20px;
+.screen{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
   padding:20px;
-  border-radius:20px;
-  background:var(--card);
-  backdrop-filter:blur(15px);
-  box-shadow:0 8px 32px rgba(0,0,0,0.3);
-  transition:0.5s;
+}
+
+.hidden{display:none;}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  margin:15px;
+  border-radius:15px;
+  width:90%;
+  max-width:400px;
 }
 
 .btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:30px;
-  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  display:block;
+  margin-top:10px;
+  padding:10px;
+  border-radius:25px;
+  background:#00c6ff;
   color:white;
   text-decoration:none;
-  margin-top:15px;
-}
-
-/* LIVE PANEL */
-.live-panel{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  padding:15px 20px;
-  border-radius:15px;
-  background:rgba(0,0,0,0.6);
-  font-size:14px;
-}
-
-/* NOTIFICATION */
-.notification{
-  position:fixed;
-  top:20px;
-  right:20px;
-  background:linear-gradient(45deg,#00c6ff,#0072ff);
-  padding:15px 20px;
-  border-radius:15px;
-  display:none;
-}
-
-@media(max-width:600px){
-  header h1{font-size:1.6rem;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="theme-toggle" onclick="toggleTheme()">🌙 / ☀</div>
-
-<canvas id="bgCanvas"></canvas>
-
-<header>
+<!-- START PAGE -->
+<div id="startScreen" class="screen">
   <h1>Mohit Bishnoi</h1>
-  <p>Premium Maths & Science Learning Platform</p>
-</header>
-
-<div class="card">
-  <h2>Welcome Students 🚀</h2>
-  <p>Interactive lessons, premium notes, live tests and performance tracking.</p>
-  <a href="#" class="btn">Start Learning</a>
+  <p>Premium Maths & Science Learning</p>
+  <button class="btn" onclick="startLearning()">Start Learning</button>
 </div>
 
-<div class="live-panel">
-  🔴 Live Students: <span id="studentCount">120</span>
-</div>
+<!-- MAIN PAGE -->
+<div id="mainScreen" class="screen hidden">
 
-<div class="notification" id="notify">
-  🎉 New Test Series Available!
+  <div class="card">
+    <h2>📚 Class 10 Maths Notes</h2>
+    <a href="https://drive.google.com/file/d/PASTE_YOUR_PDF_ID/preview" target="_blank" class="btn">
+      Real Numbers Notes
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>🎥 Physics Video</h2>
+    <a href="https://drive.google.com/file/d/PASTE_YOUR_VIDEO_ID/preview" target="_blank" class="btn">
+      Light Reflection Video
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>📝 Online Test</h2>
+    <a href="https://forms.gle/PASTE_YOUR_FORM_LINK" target="_blank" class="btn">
+      Chapter 1 Test
+    </a>
+  </div>
+
 </div>
 
 <script>
-/* ===== THEME TOGGLE ===== */
-function toggleTheme(){
-  document.body.classList.toggle("light");
-  localStorage.setItem("theme",
-    document.body.classList.contains("light") ? "light" : "dark");
+function startLearning(){
+  document.getElementById("startScreen").classList.add("hidden");
+  document.getElementById("mainScreen").classList.remove("hidden");
 }
-
-if(localStorage.getItem("theme")==="light"){
-  document.body.classList.add("light");
-}
-
-/* ===== CANVAS PARTICLES ===== */
-const canvas=document.getElementById("bgCanvas");
-const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-window.addEventListener("resize",()=>{
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-});
-
-const symbols=["∑","π","√","∆","∞","x²","θ","λ"];
-class Particle{
-  constructor(){
-    this.x=Math.random()*canvas.width;
-    this.y=Math.random()*canvas.height;
-    this.size=Math.random()*20+20;
-    this.speedY=Math.random()*1+0.5;
-    this.symbol=symbols[Math.floor(Math.random()*symbols.length)];
-    this.opacity=Math.random()*0.2+0.05;
-  }
-  update(){
-    this.y-=this.speedY;
-    if(this.y<-50){
-      this.y=canvas.height+50;
-      this.x=Math.random()*canvas.width;
-    }
-  }
-  draw(){
-    ctx.font=this.size+"px Arial";
-    ctx.fillStyle="rgba(255,255,255,"+this.opacity+")";
-    ctx.fillText(this.symbol,this.x,this.y);
-  }
-}
-
-let particles=[];
-for(let i=0;i<50;i++){particles.push(new Particle());}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{p.update();p.draw();});
-  requestAnimationFrame(animate);
-}
-animate();
-
-/* ===== LIVE COUNTER ===== */
-let count=120;
-setInterval(()=>{
-  count+=Math.floor(Math.random()*3);
-  document.getElementById("studentCount").innerText=count;
-},3000);
-
-/* ===== NOTIFICATION ===== */
-setTimeout(()=>{
-  document.getElementById("notify").style.display="block";
-},2000);
-setTimeout(()=>{
-  document.getElementById("notify").style.display="none";
-},7000);
 </script>
 
 </body>
