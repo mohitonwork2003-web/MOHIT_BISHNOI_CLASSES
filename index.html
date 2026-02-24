@@ -19,30 +19,6 @@
 <title>Mohit Bishnoi | Maths & Science Teacher</title>
 
 <style>
-<div id="notificationPopup" class="popup">
-  <div class="popup-content">
-    <span class="close-btn" id="closePopupBtn">&times;</span>
-    <h3>📢 Announcement</h3>
-    <p>Class 10 Life Process Test Available Now!</p>
-  </div>
-</div>
-<script>
-window.onload = function () {
-  const popup = document.getElementById("notificationPopup");
-  const closeBtn = document.getElementById("closePopupBtn");
-
-  closeBtn.onclick = function () {
-    popup.style.display = "none";
-  };
-
-  // Close when clicking outside box
-  popup.onclick = function (e) {
-    if (e.target === popup) {
-      popup.style.display = "none";
-    }
-  };
-};
-</script>
 body{
   margin:0;
   font-family:Segoe UI,Arial,sans-serif;
@@ -212,14 +188,14 @@ footer{
  <!-- Notification Popup -->
 <div id="notificationPopup" class="popup">
   <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <span class="close-btn">&times;</span>
     <h3>📢 Latest Announcement</h3>
     <p>New Class 10 Life process is now available!</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBWTvyipnGFw9g5gt3vYG4Px7BNfHcg8SEhfdv4gelw3Qoqg/viewform?usp=publish-editor" class="popup-btn">Check Now</a>
   </div>
 </div>
    
-</head>
+</head>  
 <body>
 <!-- FLOATING BACKGROUND -->
 <div class="floating"> 
@@ -453,6 +429,7 @@ function toggleDark(){
 
 </body>
 </html>
+
 
 
 
