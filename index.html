@@ -25,7 +25,13 @@ font-family:Arial, sans-serif;
 
 body{
 background: url('bg.jpg') no-repeat center center fixed;
-background-size: cover;
+body{
+background: linear-gradient(
+120deg,
+#f5f7fa 0%,
+#e4ecf5 50%,
+#d9e4f0 100%
+);
 color:#333;
 text-align:center;
 }
@@ -33,7 +39,9 @@ header{
 padding:30px;
 font-size:30px;
 font-weight:bold;
-background:#0f2027;
+background: linear-gradient(90deg,#3a7bd5,#00bcd4);
+color:white;
+position:relative;
 }
 
 .sub{
@@ -51,14 +59,10 @@ gap:20px;
 }
 
 .card{
-background:#1f4068;
-padding:25px;
-width:260px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
-transition:0.3s;
+background:#ffffff;
+color:#333;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
-
 .card:hover{
 transform:translateY(-10px);
 }
@@ -75,18 +79,12 @@ color:#ddd;
 }
 
 .btn{
-display:inline-block;
-background:#00c6ff;
-padding:10px 20px;
-border-radius:30px;
-text-decoration:none;
+background:#00bcd4;
 color:white;
-font-weight:bold;
-transition:0.3s;
 }
 
 .btn:hover{
-background:#0072ff;
+background:#3a7bd5;
 }
 
 footer{
@@ -379,6 +377,7 @@ Chat on WhatsApp
 </section>
 </body>
 </html>
+
 
 
 
